@@ -1,3 +1,124 @@
-{
-	"folders": []
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avishek Dey - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Raleway', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #ffffff; 
+            overflow-x: hidden;
+        }
+        .container { 
+            max-width: 1100px; 
+            margin: 40px auto; 
+            padding: 30px; 
+            background: rgba(255, 255, 255, 0.1); 
+            border-radius: 12px; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+            backdrop-filter: blur(10px);
+        }
+        header { 
+            text-align: center; 
+            padding: 50px; 
+            font-size: 2.5em; 
+            font-weight: 700; 
+            background: rgba(255, 255, 255, 0.1); 
+            border-radius: 12px; 
+            text-transform: uppercase;
+        }
+        .section { 
+            margin: 50px 0; 
+            padding: 25px; 
+            background: rgba(255, 255, 255, 0.2); 
+            border-left: 5px solid #ffd700; 
+            border-radius: 8px; 
+            transition: 0.5s; 
+            opacity: 0; 
+            transform: translateY(30px);
+        }
+        .section.visible { opacity: 1; transform: translateY(0); }
+        h2 { color: #ffd700; font-size: 2em; border-bottom: 2px solid #ffd700; padding-bottom: 5px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; line-height: 1.8; }
+        footer { 
+            text-align: center; 
+            padding: 20px; 
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 0 0 12px 12px;
+        }
+        a { color: #ffd700; text-decoration: none; font-weight: 700; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .container { margin: 20px; padding: 20px; } header { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Avishek Dey - Research Portfolio</header>
+        
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Driven by curiosity and a passion for research, I explore the intersection of data science, economics, and investment strategies. My goal is to derive meaningful insights that shape industry trends and drive innovation.</p>
+        </div>
+
+        <div class="section">
+            <h2>Work-Related Projects</h2>
+            <ul>
+                <li>Conducted advanced market research to identify untapped industry potential in emerging economies.</li>
+                <li>Pioneered the “Biniyog-Briddhi” impact investment program, fostering sustainable business ecosystems.</li>
+                <li>Optimized financial models to enhance profitability by 2.2%, reducing operational inefficiencies by $1.3M.</li>
+                <li>Led a $5M investment initiative targeting women-led businesses in the agro-processing industry.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Research & Technical Projects</h2>
+            <ul>
+                <li>Developed predictive models using machine learning to forecast retail sales for Fortune 500 clients.</li>
+                <li>Engineered risk assessment frameworks to optimize institutional investment portfolios.</li>
+                <li>Published research on the impact of data-driven strategies in business intelligence.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Competitions & Awards</h2>
+            <ul>
+                <li>Winner, UnternehmerTUM Startup Competition, Technical University of Munich (2024).</li>
+                <li>Recipient, CEO Excellence Award, LightCastle Partners (2023).</li>
+                <li>Champion, PTAK Supply Chain Case Competition (2020).</li>
+                <li>Runner-up, Battle of Minds, British American Tobacco (2020).</li>
+                <li>Regional Champion, Hult Prize, United Nations & Clinton Global Initiative (2019).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Open to collaborations, research discussions, and data-driven initiatives.</p>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | LinkedIn: <a href="#">Your Profile</a> | GitHub: <a href="#">Your Profile</a></p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Avishek Dey. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
